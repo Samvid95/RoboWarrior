@@ -10,6 +10,11 @@ public class PlayerMovementController : PhysicsObject {
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    public GameObject attackBox;
+
+    public delegate void FlipAction();
+    public static event FlipAction OnFlip;
+
 	// Use this for initialization
 	void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -35,13 +40,18 @@ public class PlayerMovementController : PhysicsObject {
             }
         }
 
-        Debug.Log(move.x);
+        //Debug.Log(move.x);
 
         bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < -0.01f));
         if (flipSprite)
         {
             spriteRenderer.flipX = !spriteRenderer.flipX;
+            if(OnFlip != null)
+            {
+                OnFlip();
+            }
         }
+
 
       //  animator.SetBool("grounded", grounded);
     //   animator.SetFloat("velocityX", Mathf.Abs(velocity.x) / maxSpeed);

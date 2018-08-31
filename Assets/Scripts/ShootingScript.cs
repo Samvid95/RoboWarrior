@@ -17,7 +17,6 @@ public class ShootingScript : MonoBehaviour {
 
     private Transform playerTransform;
     private Vector2 targetPlace;
-
     // Use this for initialization
     void Start () {
         playerTransform = GameObject.Find("RoboWarrior").transform;
@@ -30,23 +29,33 @@ public class ShootingScript : MonoBehaviour {
         {
             InvokeRepeating("StraightShooter", 2, 7);
         }
+
 	}
+
+    private void Update()
+    {
+
+    }
 
     void StraightShooter()
     {
         //Bullet is instantiated! 
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        bullet.GetComponent<BulletScript>().spawnSpikey = false;
         targetPlace = playerTransform.position;
         bullet.GetComponent<Rigidbody2D>().isKinematic = true;
         bullet.GetComponent<Rigidbody2D>().velocity = StraightVel(targetPlace, shootingSpeed);
+        Destroy(bullet, 4.0f);
     }
 	
 	void ParabolicShooter()
     {
         //Bullet is instantiated! 
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        bullet.GetComponent<BulletScript>().spawnSpikey = true;
         targetPlace = playerTransform.position;
         bullet.GetComponent<Rigidbody2D>().velocity = BallisticVel(targetPlace, shootAngle);
+        Destroy(bullet, 4.0f);
     }
 
     Vector2 StraightVel(Vector2 targetPlace, float shootingSpeed)
