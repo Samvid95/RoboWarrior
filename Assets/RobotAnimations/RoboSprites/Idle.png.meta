@@ -1,0 +1,258 @@
+fileFormatVersion: 2
+guid: 991a9cce3430f4744a2ca84f3560e2c8
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Battle Idle (0.0, -1.0) 0000
+    21300002: Battle Idle (0.0, -1.0) 0001
+    21300004: Battle Idle (0.0, -1.0) 0002
+    21300006: Battle Idle (0.0, -1.0) 0003
+    21300008: Battle Idle (0.0, -1.0) 0004
+    21300010: Battle Idle (0.0, -1.0) 0005
+    21300012: Battle Idle (0.0, -1.0) 0006
+    21300014: Battle Idle (0.0, -1.0) 0007
+    21300016: Battle Idle (0.0, -1.0) 0008
+    21300018: Battle Idle (0.0, -1.0) 0009
+    21300020: Battle Idle (0.0, -1.0) 0010
+    21300022: Battle Idle (0.0, -1.0) 0011
+    21300024: Battle Idle (0.0, -1.0) 0012
+    21300026: Battle Idle (0.0, -1.0) 0013
+    21300028: Battle Idle (0.0, -1.0) 0014
+    21300030: Battle Idle (0.0, -1.0) 0015
+    21300032: Battle Idle (0.0, -1.0) 0016
+    21300034: Battle Idle (0.0, -1.0) 0017
+    21300036: Battle Idle (0.0, -1.0) 0018
+    21300038: Battle Idle (0.0, -1.0) 0019
+    21300040: Battle Idle (0.0, -1.0) 0020
+    21300042: Battle Idle (0.0, -1.0) 0021
+    21300044: Battle Idle (0.0, -1.0) 0022
+    21300046: Battle Idle (0.0, -1.0) 0023
+    21300048: Battle Idle (0.0, -1.0) 0024
+    21300050: Battle Idle (0.0, -1.0) 0025
+    21300052: Battle Idle (0.0, -1.0) 0026
+    21300054: Battle Idle (0.0, -1.0) 0027
+    21300056: Battle Idle (0.0, -1.0) 0028
+    21300058: Battle Idle (0.0, -1.0) 0029
+    21300060: Idle_0
+    21300062: Idle_1
+    21300064: Idle_2
+    21300066: Idle_3
+    21300068: Idle_4
+    21300070: Idle_5
+    21300072: Idle_6
+    21300074: Idle_7
+    21300076: Idle_8
+    21300078: Idle_9
+    21300080: Idle_10
+    21300082: Idle_11
+    21300084: Idle_12
+    21300086: Idle_13
+    21300088: Idle_14
+    21300090: Idle_15
+    21300092: Idle_16
+    21300094: Idle_17
+    21300096: Idle_18
+    21300098: Idle_19
+    21300100: Idle_20
+    21300102: Idle_21
+    21300104: Idle_22
+    21300106: Idle_23
+    21300108: Idle_24
+    21300110: Idle_25
+    21300112: Idle_26
+    21300114: Idle_27
+    21300116: Idle_28
+    21300118: Idle_29
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Idle_0
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 750
+        width: 92
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle_1
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 749
+        width: 92
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 423
+        width: 91
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 424
+        width: 91
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle_4
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 423
+        width: 92
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle_5
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 97
+        width: 92
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle_6
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 97
+        width: 92
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Idle_7
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 97
+        width: 92
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

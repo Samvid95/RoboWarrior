@@ -1,0 +1,566 @@
+fileFormatVersion: 2
+guid: 810cbd7cfee806e40bafbd90edaff41f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Battle Idle (0.0, 0.0) 0000
+    21300002: Battle Idle (0.0, 0.0) 0001
+    21300004: Battle Idle (0.0, 0.0) 0002
+    21300006: Battle Idle (0.0, 0.0) 0003
+    21300008: Battle Idle (0.0, 0.0) 0004
+    21300010: Battle Idle (0.0, 0.0) 0005
+    21300012: Battle Idle (0.0, 0.0) 0006
+    21300014: Battle Idle (0.0, 0.0) 0007
+    21300016: Walk (0.0, 0.0) 0000
+    21300018: Walk (0.0, 0.0) 0001
+    21300020: Walk (0.0, 0.0) 0002
+    21300022: Walk (0.0, 0.0) 0003
+    21300024: Walk (0.0, 0.0) 0004
+    21300026: Walk (0.0, 0.0) 0005
+    21300028: Walk (0.0, 0.0) 0006
+    21300030: Walk (0.0, 0.0) 0007
+    21300032: Normal Punch (0.0, 0.0) 0000
+    21300034: Normal Punch (0.0, 0.0) 0001
+    21300036: Normal Punch (0.0, 0.0) 0002
+    21300038: Normal Punch (0.0, 0.0) 0003
+    21300040: Normal Punch (0.0, 0.0) 0004
+    21300042: Normal Punch (0.0, 0.0) 0005
+    21300044: Normal Punch (0.0, 0.0) 0006
+    21300046: Normal Punch (0.0, 0.0) 0007
+    21300048: Jump  (0.0, 0.0) 0000
+    21300050: Jump  (0.0, 0.0) 0001
+    21300052: Jump  (0.0, 0.0) 0002
+    21300054: Jump  (0.0, 0.0) 0003
+    21300056: Jump  (0.0, 0.0) 0004
+    21300058: Jump  (0.0, 0.0) 0005
+    21300060: Jump  (0.0, 0.0) 0006
+    21300062: Jump  (0.0, 0.0) 0007
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Battle Idle (0.0, 0.0) 0000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Battle Idle (0.0, 0.0) 0001
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Battle Idle (0.0, 0.0) 0002
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Battle Idle (0.0, 0.0) 0003
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Battle Idle (0.0, 0.0) 0004
+      rect:
+        serializedVersion: 2
+        x: 2056
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Battle Idle (0.0, 0.0) 0005
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Battle Idle (0.0, 0.0) 0006
+      rect:
+        serializedVersion: 2
+        x: 3084
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Battle Idle (0.0, 0.0) 0007
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 514
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Walk (0.0, 0.0) 0000
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1028
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Walk (0.0, 0.0) 0001
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1542
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Walk (0.0, 0.0) 0002
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2056
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Walk (0.0, 0.0) 0003
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2570
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Walk (0.0, 0.0) 0004
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3084
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Walk (0.0, 0.0) 0005
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 514
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Walk (0.0, 0.0) 0006
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 514
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Walk (0.0, 0.0) 0007
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 514
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Normal Punch (0.0, 0.0) 0000
+      rect:
+        serializedVersion: 2
+        x: 2056
+        y: 514
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Normal Punch (0.0, 0.0) 0001
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 514
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Normal Punch (0.0, 0.0) 0002
+      rect:
+        serializedVersion: 2
+        x: 3084
+        y: 514
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Normal Punch (0.0, 0.0) 0003
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1028
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Normal Punch (0.0, 0.0) 0004
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1542
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Normal Punch (0.0, 0.0) 0005
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 2056
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Normal Punch (0.0, 0.0) 0006
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 2570
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Normal Punch (0.0, 0.0) 0007
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 3084
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Jump  (0.0, 0.0) 0000
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 1028
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Jump  (0.0, 0.0) 0001
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 1028
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Jump  (0.0, 0.0) 0002
+      rect:
+        serializedVersion: 2
+        x: 2056
+        y: 1028
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Jump  (0.0, 0.0) 0003
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 1028
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Jump  (0.0, 0.0) 0004
+      rect:
+        serializedVersion: 2
+        x: 3084
+        y: 1028
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Jump  (0.0, 0.0) 0005
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 1542
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Jump  (0.0, 0.0) 0006
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 2056
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Jump  (0.0, 0.0) 0007
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 2570
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
