@@ -18,11 +18,14 @@ public class ShootingScript : MonoBehaviour {
     private Transform playerTransform;
     private Vector2 targetPlace;
 
+    private SpriteRenderer spriteRenderer;
+
     private Animator anim; 
     // Use this for initialization
     void Start () {
         playerTransform = GameObject.Find("RoboWarrior").transform;
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         if (enemy == EnemyType.Enemy1)
         {
             //Invoke the parabolic shooter function
@@ -37,13 +40,20 @@ public class ShootingScript : MonoBehaviour {
 
     private void Update()
     {
-
+        Debug.Log(transform.position.x - playerTransform.position.x);
+        float dist = transform.position.x - playerTransform.position.x;
+        bool flipSprite = (spriteRenderer.flipX ? (dist > 0.01f) : (dist < -0.01f));
+        if (flipSprite)
+        {
+            spriteRenderer.flipX = !spriteRenderer.flipX;
+        }
     }
 
     void StraightShooter()
     {
         //Bullet is instantiated! 
         anim.SetTrigger("attacked");
+
         Invoke("ShootStraightBullet", 0.5f);
     }
 
