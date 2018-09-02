@@ -10,9 +10,12 @@ public class OpponentHealth : MonoBehaviour {
 
     private Color originalColor;
 
+    private Animator anim;
+
 	// Use this for initialization
 	void Start () {
         originalColor = GetComponent<SpriteRenderer>().color;
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -23,7 +26,8 @@ public class OpponentHealth : MonoBehaviour {
             {
                 OnZeroHealth();
             }
-            Destroy(gameObject);
+            anim.SetTrigger("dead");
+            Destroy(gameObject,1.2f);
         }
 	}
 

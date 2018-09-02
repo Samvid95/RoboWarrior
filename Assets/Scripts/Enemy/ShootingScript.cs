@@ -17,9 +17,12 @@ public class ShootingScript : MonoBehaviour {
 
     private Transform playerTransform;
     private Vector2 targetPlace;
+
+    private Animator anim; 
     // Use this for initialization
     void Start () {
         playerTransform = GameObject.Find("RoboWarrior").transform;
+        anim = GetComponent<Animator>();
         if (enemy == EnemyType.Enemy1)
         {
             //Invoke the parabolic shooter function
@@ -40,7 +43,13 @@ public class ShootingScript : MonoBehaviour {
     void StraightShooter()
     {
         //Bullet is instantiated! 
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        anim.SetTrigger("attacked");
+        Invoke("ShootStraightBullet", 0.5f);
+    }
+
+    void ShootStraightBullet()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, transform.position + new Vector3(0, 0.2f, 0), Quaternion.identity);
         bullet.GetComponent<BulletScript>().spawnSpikey = false;
         targetPlace = playerTransform.position;
         bullet.GetComponent<Rigidbody2D>().isKinematic = true;
@@ -51,7 +60,8 @@ public class ShootingScript : MonoBehaviour {
 	void ParabolicShooter()
     {
         //Bullet is instantiated! 
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        anim.SetTrigger("attacked");
+        GameObject bullet = Instantiate(bulletPrefab, transform.position + new Vector3(0,0.2f,0), Quaternion.identity);
         bullet.GetComponent<BulletScript>().spawnSpikey = true;
         targetPlace = playerTransform.position;
         bullet.GetComponent<Rigidbody2D>().velocity = BallisticVel(targetPlace, shootAngle);
@@ -69,6 +79,7 @@ public class ShootingScript : MonoBehaviour {
 
     Vector2 BallisticVel(Vector2 targetPlace, float shootingAngle)
     {
+        
         Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
         Vector2 direction = targetPlace - currentPosition;
         float height = direction.y;
@@ -77,7 +88,7 @@ public class ShootingScript : MonoBehaviour {
         float angle = shootingAngle * Mathf.Deg2Rad;
         direction.y = distance * Mathf.Tan(angle);
         distance += height / Mathf.Tan(angle);
-
+        
         float finalVel = Mathf.Sqrt(distance * Physics.gravity.magnitude / Mathf.Sin(2 * angle));
         return finalVel * direction.normalized;
 

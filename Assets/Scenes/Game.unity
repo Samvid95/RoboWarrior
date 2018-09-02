@@ -608,7 +608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87de596ad4ed24d4786cecd74eea7273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 60
+  time: 120
   sceneText: {fileID: 309979591}
 --- !u!114 &309979591
 MonoBehaviour:
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e8c3c37aea2694e891e015f700a3cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 15000
+  health: 120
   healthText: {fileID: 1220408489}
 --- !u!1 &656222918
 GameObject:
