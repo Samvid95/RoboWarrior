@@ -6,6 +6,7 @@ using DG.Tweening;
 public class SpikeyScript : MonoBehaviour {
 
     public int dmg = 20;
+    public float force = 3f;
 
     private void Start()
     {
@@ -29,7 +30,14 @@ public class SpikeyScript : MonoBehaviour {
         //This is for the bullet! 
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealthManager>().Damage(dmg);
+            Vector2 dir = collision.contacts[0].point - (Vector2)transform.position;
+            dir = dir.normalized;
+            //collision.gameObject.GetComponent<PlayerHealthManager>().Damage(dmg);
+            //Vector2 currentPos = collision.gameObject.GetComponent<Rigidbody2D>().position + dir * force;
+            //collision.gameObject.GetComponent<Rigidbody2D>().MovePosition(currentPos);
+            Vector2 currentPosition = collision.gameObject.GetComponent<Rigidbody2D>().position;
+            collision.gameObject.GetComponent<Rigidbody2D>().position = currentPosition + dir;
+
         }
     }
 }
