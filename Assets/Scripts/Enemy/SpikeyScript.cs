@@ -32,7 +32,7 @@ public class SpikeyScript : MonoBehaviour {
         {
             Vector2 dir = collision.contacts[0].point - (Vector2)transform.position;
             dir = dir.normalized;
-            //collision.gameObject.GetComponent<PlayerHealthManager>().Damage(dmg);
+            collision.gameObject.GetComponent<PlayerHealthManager>().Damage(dmg);
             //Vector2 currentPos = collision.gameObject.GetComponent<Rigidbody2D>().position + dir * force;
             //collision.gameObject.GetComponent<Rigidbody2D>().MovePosition(currentPos);
             Vector2 currentPosition = collision.gameObject.GetComponent<Rigidbody2D>().position;

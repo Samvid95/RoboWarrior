@@ -40,7 +40,7 @@ public class ShootingScript : MonoBehaviour {
 
     private void Update()
     {
-        Debug.Log(transform.position.x - playerTransform.position.x);
+        //Debug.Log(transform.position.x - playerTransform.position.x);
         float dist = transform.position.x - playerTransform.position.x;
         bool flipSprite = (spriteRenderer.flipX ? (dist > 0.01f) : (dist < -0.01f));
         if (flipSprite)

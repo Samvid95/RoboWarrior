@@ -13,7 +13,7 @@ public class BulletScript : MonoBehaviour {
     {
 
         //This is for the bullet! 
-        if (collision.isTrigger == false && collision.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             collision.SendMessageUpwards("Damage", dmg);
             Destroy(gameObject);

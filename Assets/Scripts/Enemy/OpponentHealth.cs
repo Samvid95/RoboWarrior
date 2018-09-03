@@ -12,6 +12,8 @@ public class OpponentHealth : MonoBehaviour {
 
     private Animator anim;
 
+    private bool playOnce = true;
+
 	// Use this for initialization
 	void Start () {
         originalColor = GetComponent<SpriteRenderer>().color;
@@ -26,8 +28,13 @@ public class OpponentHealth : MonoBehaviour {
             {
                 OnZeroHealth();
             }
-            anim.SetTrigger("dead");
-            Destroy(gameObject,1.2f);
+            if (playOnce)
+            {
+                anim.SetTrigger("dead");
+                Destroy(gameObject, 1.2f);
+                playOnce = false;
+            }
+            
         }
 	}
 

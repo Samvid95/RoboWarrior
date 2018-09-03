@@ -16,7 +16,9 @@ public class EnemyRespawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         enemy1 = Instantiate(Enemy1, place1);
+        enemy1.name = "Enemy1";
         enemy2 = Instantiate(Enemy2, place2);
+        enemy2.name = "Enemy2";
     }
 
     private void OnEnable()
@@ -41,7 +43,7 @@ public class EnemyRespawner : MonoBehaviour {
             enemy1 = Instantiate(Enemy1, place1);
             enemy1.name = "Enemy1";
         }
-        else
+        if(!GameObject.Find("Enemy2"))
         {
             enemy2 = Instantiate(Enemy2, place2);
             enemy2.name = "Enemy2";

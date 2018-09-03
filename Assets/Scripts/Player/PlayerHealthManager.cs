@@ -19,7 +19,7 @@ public class PlayerHealthManager : MonoBehaviour {
 		if(health <= 0)
         {
             DestroyImmediate(gameObject);
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene("Lose");
         }
         healthText.text = "Health: " + health.ToString();
 	}
