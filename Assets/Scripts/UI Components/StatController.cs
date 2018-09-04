@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// This class controls the information about the Canvas of player progress. 
+/// </summary>
 public class StatController : MonoBehaviour {
 
     public GameObject chomperCompleted;
@@ -15,7 +18,7 @@ public class StatController : MonoBehaviour {
 
     public int maxKills = 4;
 	// Use this for initialization
-	void Start () {
+	void OnEnable () {
         chomperCompleted.SetActive(false);
         spitterCompleted.SetActive(false);
 	}
@@ -41,7 +44,9 @@ public class StatController : MonoBehaviour {
         {
             spitterCompleted.SetActive(false);
         }
-            if (PlayerStatManager.ChomperKills >= maxKills && PlayerStatManager.SpitterKills >= maxKills)
+
+        //When killed all the enemies we will send the values to the game manager that player actually won! 
+        if (PlayerStatManager.ChomperKills >= maxKills && PlayerStatManager.SpitterKills >= maxKills)
         {
             if (KilledEnemies != null)
             {

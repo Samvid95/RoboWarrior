@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+/// <summary>
+/// This class will look for players dropping out of the platform spaces.
+/// </summary>
 public class BorderControl : MonoBehaviour {
 
     public LevelManager levelManager;
+
+    //Here here lurkers, look when the player messes up and robo falls down from the platform. 
     public delegate void PlayerFellDown();
     public static event PlayerFellDown DroppedOut;
 
@@ -23,6 +27,5 @@ public class BorderControl : MonoBehaviour {
             // levelManager.LoadLevel("Lose");
         }
 
-       // collision.gameObject.SetActive(false);
     }
 }

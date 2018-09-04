@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+/// <summary>
+/// Keeps track of the health and make it proper.
+/// Improvemnt: I could have incorporate this in the statController but I am out of time. 
+/// </summary>
 public class HealthDownSlider : MonoBehaviour {
 
     private Image fillImg;

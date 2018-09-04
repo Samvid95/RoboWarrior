@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CountDownTimer : MonoBehaviour {
-
+    //It's a simple timer script. 
     Image fillImage;
     public static float timeAmt = 180;
     float time = 0;
 
+    //Interested people just come on and keep track when the person ran out of time. 
     public delegate void TimeUp();
     public static event TimeUp TimeZero;
 

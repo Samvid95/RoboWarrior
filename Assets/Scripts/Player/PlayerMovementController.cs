@@ -2,19 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Main code connected to the player and inherited from the PhysicsObject class. 
+/// It does a lot of things to manage and do some other stuff as well. 
+/// </summary>
 public class PlayerMovementController : PhysicsObject {
 
+
+    //This are the movement speed and jumping speed.
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    //Attack hitbox when player punches
     public GameObject attackBox;
 
+    //This even send out it's state everytime player flips his looking direction.
     public delegate void FlipAction();
     public static event FlipAction OnFlip;
 
+
+    //To Manage the Canvas that' all. 
     public Transform spitterTransform;
     public Transform chomperTransform;
 
@@ -28,19 +38,8 @@ public class PlayerMovementController : PhysicsObject {
     {
         base.ComputeVelocity();
         Vector2 move = Vector2.zero;
-
+        //Inputs and calculations
         move.x = Input.GetAxis("Horizontal");
-
-       if(move.x == 0 && grounded)
-        {
-            spitterTransform.gameObject.SetActive(true);
-            chomperTransform.gameObject.SetActive(true);
-        }
-        else
-        {
-            spitterTransform.gameObject.SetActive(false);
-            chomperTransform.gameObject.SetActive(false);
-        }
         
         if(Input.GetButtonDown("Jump") && grounded)
         {
@@ -54,6 +53,7 @@ public class PlayerMovementController : PhysicsObject {
             }
         }
 
+        //Animation control according to the velocity.
         if(velocity.y > 0.01f)
         {
             animator.SetTrigger("jump");
@@ -65,6 +65,7 @@ public class PlayerMovementController : PhysicsObject {
 
         //Debug.Log(move.x);
 
+        //Management of the player sprite
         bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < -0.01f));
         if (flipSprite)
         {
@@ -82,8 +83,23 @@ public class PlayerMovementController : PhysicsObject {
 
         targetVelocity = move * maxSpeed;
 
+        //This part just manages the canvas of scores above the player
+        if (move.x == 0 && grounded)
+        {
+            spitterTransform.gameObject.SetActive(true);
+            chomperTransform.gameObject.SetActive(true);
+        }
+        else
+        {
+            spitterTransform.gameObject.SetActive(false);
+            chomperTransform.gameObject.SetActive(false);
+        }
+
     }
 
+    /// <summary>
+    /// This part handles layers in the animation window as the player changes it's movement from ground to jumping in the air.
+    /// </summary>
     private void HandleLayers()
     {
         if(!grounded)

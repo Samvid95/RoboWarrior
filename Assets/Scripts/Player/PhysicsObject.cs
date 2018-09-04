@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This is the base class for computing player's movements. 
+/// </summary>
 public class PhysicsObject : MonoBehaviour {
 
     public float minGroundNormalY = 0.65f;
@@ -42,8 +44,13 @@ public class PhysicsObject : MonoBehaviour {
     {
 
     }
+    /// <summary>
+    /// This is the part where most of the movement calculations happens including Jump and Move.
+    /// There are 2 calls to the move functions because first call just calculate's it's position when the player is on the ground & the other call calculates it's movement along the Y  axis.
+    /// </summary>
     private void FixedUpdate()
     {
+        //Dear old Gravity - I will call this the Uraraka block
         velocity += gravityModifier * Physics2D.gravity * Time.deltaTime;
         velocity.x = targetVelocity.x;
 
@@ -63,7 +70,15 @@ public class PhysicsObject : MonoBehaviour {
         Movement(move,true);
       
     }
-
+    /// <summary>
+    /// This code constantly adding objects in the buffer and try to change the position of the player according to the normal vectors.  It also keeps track of the jumping variable Grounded too so any subclass can use it to 
+    /// modify behavior like adding a double jump ;-) 
+    /// </summary>
+    /// <param name="move"></param>
+    /// <param name="yMovement"></param>
+    /// <remarks>
+    /// This code won't be able to handle very steep slopes of more than 45 degrees as it creates problems in the normal calculation it makes the normal value less than minNormal and everything breaks. 
+    /// </remarks>
     void Movement(Vector2 move, bool yMovement)
     {
         float distance = move.magnitude;

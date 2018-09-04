@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This is the script responsible to shoot the player. Only Sharp Shooters and Stream Snipers are welcome to use this enemy scripts. 
+/// </summary>
 public class ShootingScript : MonoBehaviour {
    
+    //Deciding which type of enemy will use this. 
     public enum EnemyType
     {
         Enemy1,
@@ -15,6 +18,7 @@ public class ShootingScript : MonoBehaviour {
 
     public EnemyType enemy;
 
+    //Some basic non interesting things defined here! 
     private Transform playerTransform;
     private Vector2 targetPlace;
 
@@ -37,7 +41,9 @@ public class ShootingScript : MonoBehaviour {
         }
 
 	}
-
+    /// <summary>
+    /// This part keeps track of where the player is and keep the enemies looking at the player.
+    /// </summary>
     private void Update()
     {
         //Debug.Log(transform.position.x - playerTransform.position.x);
@@ -48,7 +54,7 @@ public class ShootingScript : MonoBehaviour {
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
     }
-
+    //Dummy function so that I can manage the animations.       
     void StraightShooter()
     {
         //Bullet is instantiated! 
@@ -57,6 +63,7 @@ public class ShootingScript : MonoBehaviour {
         Invoke("ShootStraightBullet", 0.5f);
     }
 
+    //Shoot in the straight line.
     void ShootStraightBullet()
     {
         GameObject bullet = Instantiate(bulletPrefab, transform.position + new Vector3(0, 0.2f, 0), Quaternion.identity);
@@ -67,6 +74,7 @@ public class ShootingScript : MonoBehaviour {
         Destroy(bullet, 4.0f);
     }
 	
+    //Shooting in the parabolic curve
 	void ParabolicShooter()
     {
         //Bullet is instantiated! 
@@ -78,6 +86,7 @@ public class ShootingScript : MonoBehaviour {
         Destroy(bullet, 4.0f);
     }
 
+    //Not much thing to do in here
     Vector2 StraightVel(Vector2 targetPlace, float shootingSpeed)
     {
         Vector2 currentPosition = new Vector2(transform.position.x, transform.position.y);
@@ -86,7 +95,13 @@ public class ShootingScript : MonoBehaviour {
         return shootingSpeed * direction.normalized;
     }
 
-
+    //oooooooooooooo look papa, I am doing Algebra and geometry and calculating stuff.
+    /// <summary>
+    /// This function will calculate the parabolic tragectory from the shooting angles and target point and returns the velocity according to it. 
+    /// </summary>
+    /// <param name="targetPlace"></param>
+    /// <param name="shootingAngle"></param>
+    /// <returns></returns>
     Vector2 BallisticVel(Vector2 targetPlace, float shootingAngle)
     {
         

@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This script is on the bullet with the sole person of destroying the gameobject when un-necessary and spawn the Spikey on the proper timing. 
+/// </summary>
 public class BulletScript : MonoBehaviour {
     public int dmg = 20;
 

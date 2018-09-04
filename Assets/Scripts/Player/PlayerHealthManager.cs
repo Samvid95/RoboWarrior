@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// Managing the player's health.
+/// </summary>
 public class PlayerHealthManager : MonoBehaviour {
 
     public static int health = 200;
 
+    //LIKE, SHARE & SUBSCRIBE if you like to learn more when the player is dead! 
     public delegate void PlayerLost();
     public static event PlayerLost HealthZero;
 
@@ -20,15 +23,17 @@ public class PlayerHealthManager : MonoBehaviour {
 	void Update () {
 		if(health <= 0)
         {
-          //  DestroyImmediate(gameObject);
-           // SceneManager.LoadScene("Lose");
+
            if(HealthZero != null)
             {
                 HealthZero();
             }
         }
 	}
-
+    /// <summary>
+    /// Most of the time its values are coming from the colliders and dealing damage to the player.
+    /// </summary>
+    /// <param name="damage"></param>
     public void Damage(int damage)
     {
         health -= damage;

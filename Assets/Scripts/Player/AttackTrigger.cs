@@ -1,7 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// This class keeps track when you are punching. 
+/// The biggest reason of having all Enter, Stay and Exit is because some players just smash the attack button constantly so box never gets turned off so in that case I needed Stay method. 
+/// </summary>
 public class AttackTrigger : MonoBehaviour {
 
     public int dmg = 20;
@@ -14,6 +17,7 @@ public class AttackTrigger : MonoBehaviour {
 
     private void Awake()
     {
+        //They are listening to the player when it flips so that will help change the position of this trigger.
         PlayerMovementController.OnFlip += ChangePosition;
     }
 
@@ -55,6 +59,7 @@ public class AttackTrigger : MonoBehaviour {
         attacking = false;
     }
 
+    //Change the position of this trigger. If I able to solve the problem of player standing in the air correctly I will remove this part.
     void ChangePosition()
     {
         if (lookingRight)
