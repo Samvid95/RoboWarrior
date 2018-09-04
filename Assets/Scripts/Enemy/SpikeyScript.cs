@@ -13,6 +13,7 @@ public class SpikeyScript : MonoBehaviour {
     {
         DOTween.Init();    
         GetComponent<SpriteRenderer>().DOFade(1.0f, 2.5f);
+        Destroy(gameObject, 15f);
         InvokeRepeating("ShakeItUp", 3, 2);
     }
 

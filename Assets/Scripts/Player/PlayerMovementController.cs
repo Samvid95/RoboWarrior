@@ -28,6 +28,8 @@ public class PlayerMovementController : PhysicsObject {
     public Transform spitterTransform;
     public Transform chomperTransform;
 
+    bool lookingRight = true;
+
 	// Use this for initialization
 	void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -63,18 +65,18 @@ public class PlayerMovementController : PhysicsObject {
             animator.SetBool("land",true);
         }
 
-        //Debug.Log(move.x);
-
-        //Management of the player sprite
-        bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < -0.01f));
-        if (flipSprite)
+  
+        if(lookingRight && move.x < -0.01f)
         {
-            spriteRenderer.flipX = !spriteRenderer.flipX;
-            if(OnFlip != null)
-            {
-                OnFlip();
-            }
+            lookingRight = false;
+            GiveItAFlip();
         }
+        else if(!lookingRight && move.x > 0.01f)
+        {
+            lookingRight = true;
+            GiveItAFlip();
+        }
+
 
 
         HandleLayers();
@@ -112,5 +114,16 @@ public class PlayerMovementController : PhysicsObject {
             animator.SetBool("land", false);
             animator.SetLayerWeight(1, 0);
         }
+    }
+
+    void GiveItAFlip()
+    {
+        if(OnFlip != null)
+        {
+            OnFlip();
+        }
+        Vector3 currRotation = transform.rotation.eulerAngles;
+        currRotation += new Vector3(0, 180, 0);
+        transform.rotation = Quaternion.Euler(currRotation);
     }
 }

@@ -10,6 +10,8 @@ public class PlayerHealthManager : MonoBehaviour {
 
     public static int health = 200;
 
+    public GameObject explosion;
+
     //LIKE, SHARE & SUBSCRIBE if you like to learn more when the player is dead! 
     public delegate void PlayerLost();
     public static event PlayerLost HealthZero;
@@ -36,6 +38,8 @@ public class PlayerHealthManager : MonoBehaviour {
     /// <param name="damage"></param>
     public void Damage(int damage)
     {
+        GameObject boomboom = Instantiate(explosion, transform);
+        Destroy(boomboom, 3.5f);
         health -= damage;
     }
 

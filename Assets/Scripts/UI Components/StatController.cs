@@ -21,10 +21,17 @@ public class StatController : MonoBehaviour {
 	void OnEnable () {
         chomperCompleted.SetActive(false);
         spitterCompleted.SetActive(false);
+
+        PlayerMovementController.OnFlip += CanvasFlip;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void OnDisable()
+    {
+        PlayerMovementController.OnFlip -= CanvasFlip;
+    }
+
+    // Update is called once per frame
+    void Update () {
         chomperKills.text = "<size=45>x</size><color=black>" + PlayerStatManager.ChomperKills.ToString() + "</color>";
         spitterKills.text = "<size=45>x</size><color=black>" + PlayerStatManager.SpitterKills.ToString() + "</color>";
         
@@ -53,5 +60,12 @@ public class StatController : MonoBehaviour {
                 KilledEnemies();
             }
         }
+    }
+
+    void CanvasFlip()
+    {
+        Vector3 currRotation = GetComponent<RectTransform>().rotation.eulerAngles;
+        currRotation += new Vector3(0, 180, 0);
+        GetComponent<RectTransform>().rotation = Quaternion.Euler(currRotation);
     }
 }

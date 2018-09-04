@@ -8,7 +8,6 @@ using UnityEngine;
 public class AttackTrigger : MonoBehaviour {
 
     public int dmg = 20;
-    bool lookingRight = true;
 
     private bool attacking = false;
 
@@ -17,13 +16,11 @@ public class AttackTrigger : MonoBehaviour {
 
     private void Awake()
     {
-        //They are listening to the player when it flips so that will help change the position of this trigger.
-        PlayerMovementController.OnFlip += ChangePosition;
+
     }
 
     private void OnDisable()
     {
-        PlayerMovementController.OnFlip -= ChangePosition;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,18 +56,5 @@ public class AttackTrigger : MonoBehaviour {
         attacking = false;
     }
 
-    //Change the position of this trigger. If I able to solve the problem of player standing in the air correctly I will remove this part.
-    void ChangePosition()
-    {
-        if (lookingRight)
-        {
-            this.transform.position -= new Vector3(1.142f, 0, 0);
-            lookingRight = false;
-        }
-        else
-        {
-            this.transform.position += new Vector3(1.142f, 0, 0);
-            lookingRight = true;
-        }
-    }
+    
 }

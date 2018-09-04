@@ -97,8 +97,8 @@ public class GameManager : MonoBehaviour {
           {
               Destroy(obj);
           }*/
-       // enemyManager.SetActive(false);
-       // roboWarrior.SetActive(false);
+        enemyManager.SetActive(false);
+        roboWarrior.SetActive(false);
     }
 
     public void ChangeScene()
