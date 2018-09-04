@@ -41,7 +41,7 @@ public class EnemyManager : MonoBehaviour {
     {
         //Debug.Log("Coming into spawning enemies!");
         float rand = Random.Range(0.0f, 1.0f);
-        if(rand > 0.5f && enemies.Count < 8)
+        if(rand > 0.5f && currentEnemies < 8)
         {
             float randEnemy = Random.Range(0.0f, 1.0f);
             int randPosition = Random.Range(1, myDictionary.Count);
@@ -50,14 +50,14 @@ public class EnemyManager : MonoBehaviour {
                     GameObject enemy = Instantiate(spitter, spawnPoints[randPosition]);
                     enemy.name = "Spitter";
                     myDictionary[spawnPoints[randPosition]] = true;
-                    enemies.Add(enemy);
+                   // enemies.Add(enemy);
                 }
                 else
                 {
                     GameObject enemy = Instantiate(chomper, spawnPoints[randPosition]);
                     enemy.name = "Chomper";
                     myDictionary[spawnPoints[randPosition]] = true;
-                    enemies.Add(enemy);
+                   // enemies.Add(enemy);
                 }
                 currentEnemies++;
                // Debug.Log("Successful spawn!");          

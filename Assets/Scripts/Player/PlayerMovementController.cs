@@ -15,6 +15,9 @@ public class PlayerMovementController : PhysicsObject {
     public delegate void FlipAction();
     public static event FlipAction OnFlip;
 
+    public Transform spitterTransform;
+    public Transform chomperTransform;
+
 	// Use this for initialization
 	void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -27,6 +30,17 @@ public class PlayerMovementController : PhysicsObject {
         Vector2 move = Vector2.zero;
 
         move.x = Input.GetAxis("Horizontal");
+
+       if(move.x == 0 && grounded)
+        {
+            spitterTransform.gameObject.SetActive(true);
+            chomperTransform.gameObject.SetActive(true);
+        }
+        else
+        {
+            spitterTransform.gameObject.SetActive(false);
+            chomperTransform.gameObject.SetActive(false);
+        }
         
         if(Input.GetButtonDown("Jump") && grounded)
         {
