@@ -6,17 +6,17 @@ using DG.Tweening;
 public class SpikeyScript : MonoBehaviour {
 
     public int dmg = 20;
-    public float force = 3f;
 
     private void Start()
     {
-        DOTween.Init();
+        DOTween.Init();    
         GetComponent<SpriteRenderer>().DOFade(1.0f, 2.5f);
         InvokeRepeating("ShakeItUp", 3, 2);
     }
 
     void ShakeItUp()
     {
+        GetComponent<Rigidbody2D>().isKinematic = true;
         float rand = Random.Range(0.0f, 1.0f);
         if(rand > 0.5f)
         {

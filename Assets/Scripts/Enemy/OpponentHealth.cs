@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpponentHealth : MonoBehaviour {
     public int health = 40;
 
-    public delegate void NoHealth();
+    public delegate void NoHealth(Transform trans);
     public static event NoHealth OnZeroHealth;
 
     private Color originalColor;
@@ -24,15 +24,25 @@ public class OpponentHealth : MonoBehaviour {
 	void Update () {
 		if(health <= 0)
         {
-            if(OnZeroHealth != null)
-            {
-                OnZeroHealth();
-            }
             if (playOnce)
             {
+                GetComponent<ShootingScript>().CancelInvoke();
+                EnemyManager.currentEnemies--;
                 anim.SetTrigger("dead");
                 Destroy(gameObject, 1.2f);
                 playOnce = false;
+                if(gameObject.name == "Spitter")
+                {
+                    PlayerStatManager.SpitterKills++;
+                }
+                else
+                {
+                    PlayerStatManager.ChomperKills++;
+                }
+                if (OnZeroHealth != null)
+                {
+                    OnZeroHealth(transform.parent);
+                }
             }
             
         }

@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealthManager : MonoBehaviour {
 
-    public int health = 100;
-    public Text healthText;
+    public static int health = 200;
+
+    public delegate void PlayerLost();
+    public static event PlayerLost HealthZero;
 
 	// Use this for initialization
 	void Start () {
@@ -18,10 +20,13 @@ public class PlayerHealthManager : MonoBehaviour {
 	void Update () {
 		if(health <= 0)
         {
-            DestroyImmediate(gameObject);
-            SceneManager.LoadScene("Lose");
+          //  DestroyImmediate(gameObject);
+           // SceneManager.LoadScene("Lose");
+           if(HealthZero != null)
+            {
+                HealthZero();
+            }
         }
-        healthText.text = "Health: " + health.ToString();
 	}
 
     public void Damage(int damage)

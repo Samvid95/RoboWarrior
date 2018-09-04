@@ -23,12 +23,12 @@ public class EnemyRespawner : MonoBehaviour {
 
     private void OnEnable()
     {
-        OpponentHealth.OnZeroHealth += SpawnEnemy;
+      //  OpponentHealth.OnZeroHealth += SpawnEnemy;
     }
 
     private void OnDisable()
     {
-        OpponentHealth.OnZeroHealth -= SpawnEnemy;
+       // OpponentHealth.OnZeroHealth -= SpawnEnemy;
     }
 
     void SpawnEnemy()

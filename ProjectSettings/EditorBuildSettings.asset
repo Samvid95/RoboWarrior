@@ -14,12 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game 1.unity
     guid: 722544f5b0bfbd04ca27d6ea25494d2c
-  - enabled: 0
-    path: Assets/Scenes/Game.unity
-    guid: 28592df8270b8184d92284a28406a06f
   - enabled: 1
-    path: Assets/Scenes/EndScene.unity
-    guid: 9e21c00a4aca11e43bee2eadb6e9d30a
+    path: Assets/Scenes/Win.unity
+    guid: 61f61c3a4da86e14ba93b68fd79d39d8
   - enabled: 1
     path: Assets/Scenes/Lose.unity
     guid: f8400383bf43a1640ab3475e00f03cea
